@@ -165,7 +165,7 @@ void processCommand(String command) {
    } else if (command.startsWith(SLOW_INIT)) {
       //we should perform the slow init
       slowInit();
-   } else {
+   } else if (command.indexOf("AT") == -1) {
       //anything else must be a command for a PID read!
       uint8_t numBytes_in_command = update_OBD_msg_buff(command);//the command will not be preceeded with 'AT' when we're requesting mode/PID data
 
