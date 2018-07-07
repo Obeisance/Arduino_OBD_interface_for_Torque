@@ -18,14 +18,16 @@ the quad comparator with 12V and share a common ground
 with the car and Arduino. The K-line from the
 OBD port must be connected to an output pin from one
 comparator on the LM339 (with a pullup resistor
-to 12V) as well as an (in-) pin on the comparator.
-The (in+) on the K-line input (Rx) comparator must
+to 12V) as well as an (in+) pin on the comparator.
+The (in-) on the K-line input (Rx) comparator must
 be pulled to be between 12 and 0V. The K-line 
 output on the comparator (Tx) should be driven 
-by the Arduino Tx (pin 9) on an (in-) pin (remember
-the 5V pullup). The (in+) pin for this comparator
+by the Arduino Tx (pin 9) on an (in+) pin (remember
+the 5V pullup). The (in-) pin for this comparator
 should be pulled to be between 5 and 0V via a
 voltage divider. The Arduino Rx (pin 8) should 
 come from the comparator driven by the K-line input.
+
+See: https://www.clubwrx.net/forums/tutorials-diy/134423369-clock-pod-mod-subarb-select-monitor-ecu-polling-arduino-2.html#post4069921
 
 So far the code is untested.
